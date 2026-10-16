@@ -1,0 +1,79 @@
+/* Tema de pesca: azul-mar, areia e laranja de boia */
+:root {
+    --mar-fundo: #0b2e4a;
+    --mar-medio: #135d8c;
+    --mar-claro: #e8f4fa;
+    --areia: #f3e9d2;
+    --boia: #e8590c;
+    --texto: #12324a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: linear-gradient(180deg, var(--mar-claro) 0%, #cfe7f3 100%);
+    color: var(--texto);
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+}
+
+h2, h3 {
+    color: var(--mar-fundo);
+    border-left: 6px solid var(--boia);
+    padding-left: 10px;
+}
+
+h2::before { content: "\1F3A3  "; }
+
+a {
+    color: var(--mar-medio);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+}
+a:hover { color: var(--boia); text-decoration: underline; }
+
+form {
+    background: #fff;
+    border: 1px solid #b9d8e8;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+}
+
+input, select {
+    padding: 7px 9px;
+    margin: 3px 4px 3px 0;
+    border: 1px solid #9cc3d8;
+    border-radius: 6px;
+    background: var(--mar-claro);
+    color: var(--texto);
+}
+input:focus, select:focus { outline: 2px solid var(--mar-medio); }
+
+button {
+    background: var(--boia);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover { background: #c94a08; }
+
+table {
+    border-collapse: collapse;
+    background: #fff;
+    margin: 12px 0;
+    box-shadow: 0 1px 4px rgba(11, 46, 74, 0.2);
+}
+th {
+    background: var(--mar-fundo);
+    color: var(--areia);
+    padding: 8px 10px;
+}
+td { padding: 7px 10px; border: 1px solid #cfe0ea; }
+tr:nth-child(even) td { background: #f2f8fb; }
